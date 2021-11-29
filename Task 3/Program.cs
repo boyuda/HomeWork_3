@@ -5,6 +5,7 @@ namespace Task_3
 {
     class Program
     {
+        //Drop args
         static void Main(string[] args)
         {
             var total = 0;
@@ -18,6 +19,7 @@ namespace Task_3
             Console.WriteLine($"Please enter {numericArray.Length} elements one by one: ");
             for (int i = 0; i < input; i++)
             {
+                //typo, should be elementOfArray (single n)
                 var elemenntOfArray = Convert.ToInt32(Console.ReadLine());
                 numericArray[i] = elemenntOfArray;
             }
@@ -35,20 +37,20 @@ namespace Task_3
                 {
                     total += numericArray[i];
                 }
-            } 
-            else if (lowestNumber>largestNumber)
+            }
+            else if (lowestNumber > largestNumber)
             {
                 for (int i = lowestNumber; i >= largestNumber; i--)
                 {
                     total += numericArray[i];
                 }
-            } 
-            else if (numericArray.Length ==2)
+            }
+            else if (numericArray.Length == 2)
             {
                 total = numericArray[lowestNumber] + numericArray[largestNumber];
             }
 
-            Console.WriteLine("The sum of the required elements = " +total);  
+            Console.WriteLine("The sum of the required elements = " + total);
         }
     }
 }
